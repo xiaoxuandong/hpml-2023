@@ -34,6 +34,7 @@ EfficientNet
 ------Sad  
 ------Surprise  
 ----outputs  
+
 **Model 2: Facial Expression Recognition with EfficientNet**
 #### Installation
 1. Install pytorch >= v1.0.0 following [official instruction](https://pytorch.org/).
@@ -150,6 +151,34 @@ python train-profile.py --cuda --epochs 30 --pretrained --epochs {epoch_num} \
 
 **Model 2: Facial Expression Recognition with EfficientNet**
 
+#### Testing on COCO val2017 dataset using model zoo's models([GoogleDrive](https://drive.google.com/drive/folders/1hOTihvbyIxsm5ygDpbUuJ7O_tzv4oXjC?usp=sharing) or [OneDrive](https://1drv.ms/f/s!AhIXJn_J-blW231MH2krnmLq5kkQ))
+ 
+
+```
+python tools/test.py \
+    --cfg experiments/coco/hrnet/w32_256x192_adam_lr1e-3.yaml \
+    TEST.MODEL_FILE models/pytorch/pose_coco/pose_hrnet_w32_256x192.pth \
+    TEST.USE_GT_BBOX False
+```
+
+#### Finetuning on COCO train2017 dataset
+
+```
+python tools/train.py \
+                --cfg experiments/coco/hrnet/w32_256x192_adam_lr1e-3_finetune_gpu{gpu numbers}.yaml \
+OUTPUT_DIR output-gpu{gpu numbers}-bs{batch size number}\
+  LOG_DIR log-gpu{gpu numbers}-bs{batch size number}\
+  TRAIN.END_EPOCH {epoch number} \
+  TRAIN.BATCH_SIZE_PER_GPU {batch size number}
+```
+#### Visualizing predictions on COCO val
+
+```
+python visualization/plot_coco.py \
+    --prediction output/coco/w48_384x288_adam_lr1e-3/results/keypoints_val2017_results_0.json \
+    --save-path visualization/results
+
+```
 
 # Results and observations
 
