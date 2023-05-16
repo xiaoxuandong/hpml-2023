@@ -35,7 +35,7 @@ EfficientNet
 ------Surprise  
 ----outputs  
 **Model 2: Facial Expression Recognition with EfficientNet**
-### Installation
+#### Installation
 1. Install pytorch >= v1.0.0 following [official instruction](https://pytorch.org/).
    **Note that if you use pytorch's version < v1.0.0, you should following the instruction at <https://github.com/Microsoft/human-pose-estimation.pytorch> to disable cudnn's implementations of BatchNorm layer. We encourage you to use higher pytorch's version(>=v1.0.0)**
 2. Clone this repo, and we'll call the directory that you cloned as ${POSE_ROOT}.
@@ -95,7 +95,7 @@ EfficientNet
 
    ```
   
-### Data preparation
+#### Data preparation
 **For COCO data**, please download from [COCO download](http://cocodataset.org/#download), 2017 Train/Val is needed for COCO keypoints training and validation. We also provide person detection result of COCO val2017 and test-dev2017 to reproduce our multi-person pose estimation results. Please download from [OneDrive](https://1drv.ms/f/s!AhIXJn_J-blWzzDXoz5BeFl8sWM-) or [GoogleDrive](https://drive.google.com/drive/folders/1fRUDNUDxe9fjqcRZ2bnF_TKMlO0nB_dk?usp=sharing).
 Download and extract them under {POSE_ROOT}/data, and make them look like this:
 ```
