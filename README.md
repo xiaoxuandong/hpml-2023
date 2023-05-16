@@ -13,27 +13,26 @@ We research on model parallelism with PyTorch DataParallel. We also discussed re
 # Repository and code structure
 
 **Model 1: Facial Expression Recognition with EfficientNet**
-Download Dataset in input directory and arrange as below.
 EfficientNet
-  efficientNet-src
-  input
-    Train
-      Angry
-      Disgust
-      Fear
-      Happy
-      Neutral
-      Sad
-      Surprise
-    test_images
-      Angry
-      Disgust
-      Fear
-      Happy
-      Neutral
-      Sad
-      Surprise
-  outputs
+--efficientNet-src
+----input
+------Train
+------Angry
+------Disgust
+------Fear
+------Happy
+------Neutral
+------Sad
+------Surprise
+----test_images
+------Angry
+------Disgust
+------Fear
+------Happy
+------Neutral
+------Sad
+------Surprise
+----outputs
 **Model 2: Facial Expression Recognition with EfficientNet**
 
 # How to execute
